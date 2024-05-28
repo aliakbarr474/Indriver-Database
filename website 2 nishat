@@ -1,0 +1,109 @@
+create database nishat;
+use nishat;
+create table women(
+product_id int primary key,
+product_name varchar(30) not null,
+size ENUM('XS', 'S', 'M', 'L', 'XL', 'XXL') not null,
+color ENUM('Red', 'Blue', 'Black', 'White', 'Green', 'Yellow', 'Pink', 'Purple', 'Orange') NOT NULL,
+fabric_material varchar(35),
+price int NOT NULL CHECK (price >= 0)
+);
+SELECT * FROM nishat.women;
+insert into women 
+(product_id , product_name , size , color , fabric_material ,price)
+values
+(003, 'kurti', 'L', 'Red', 'lawn',2500),
+(005, 'Palazzo Pants', 'S', 'Black', 'Cotton', 2000),
+(006, 'Embroidered Shawl', 'M', 'Blue', 'Wool', 3500),
+(007, 'Chiffon Dupatta', 'S', 'White', 'Chiffon', 1000),
+(008, 'Printed T-Shirt', 'XL', 'Yellow', 'Polyester', 1500),
+(009, 'Formal Blouse', 'M', 'Pink', 'Silk', 3000),
+(010, 'Denim Jacket', 'L', 'Blue', 'Denim', 4000),
+(011, 'Lawn Suit', 'M', 'Green', 'Lawn', 3500),
+(012, 'Casual Trousers', 'S', 'Yellow', 'Cotton', 1800),
+(013, 'Silk Scarf', 'M', 'Purple', 'Silk', 1200),
+(014, 'Winter Coat', 'L', 'Black', 'Wool', 6000),
+(015, 'Summer Dress', 'M', 'Orange', 'Cotton', 2500);
+
+create table men(
+product_id int primary key,
+product_name varchar(30) not null,
+size ENUM('XS', 'S', 'M', 'L', 'XL', 'XXL') not null,
+color ENUM('Red', 'Blue', 'Black', 'White', 'Green', 'Yellow', 'Pink', 'Purple', 'Orange') NOT NULL,
+fabric_material varchar(35),
+price int NOT NULL CHECK (price >= 0),
+category varchar (40)
+);
+insert into men (product_id , product_name , size , color , fabric_material ,price,category)
+values 
+(101, 'Formal Shirt', 'M', 'Blue', 'Cotton', 3000, 'Shirts'),
+(102, 'Casual T-Shirt', 'L', 'Red', 'Polyester', 1500, 'T-Shirts'),
+(103, 'Jeans', 'M', 'Black', 'Denim', 3500, 'Bottoms'),
+(104, 'Chino Pants', 'L', 'White', 'Cotton', 2500, 'Bottoms'),
+(105, 'Blazer', 'XL', 'Black', 'Wool', 5000, 'Outerwear'),
+(106, 'Hoodie', 'L', 'Green', 'Fleece', 2000, 'Sweatshirts'),
+(107, 'Polo Shirt', 'M', 'Yellow', 'Cotton', 1800, 'Shirts'),
+(108, 'Sweater', 'L', 'Purple', 'Wool', 3000, 'Knitwear'),
+(109, 'Jacket', 'XL', 'Orange', 'Leather', 6000, 'Outerwear'),
+(110, 'Track Pants', 'M', 'Blue', 'Polyester', 2200, 'Bottoms'),
+(111, 'Kurta', 'M', 'White', 'Linen', 2500, 'Traditional Wear'),
+(112, 'Waistcoat', 'L', 'Black', 'Silk', 3500, 'Traditional Wear'),
+(113, 'Shorts', 'S', 'Green', 'Cotton', 1500, 'Bottoms'),
+(114, 'Dress Pants', 'M', 'Black', 'Wool', 4000, 'Bottoms'),
+(115, 'Tank Top', 'L', 'Red', 'Polyester', 1200, 'T-Shirts');
+
+create table nishat_home(
+product_id int primary key,
+product_name varchar(30) not null,
+size ENUM('XS', 'S', 'M', 'L', 'XL', 'XXL') not null,
+color ENUM('Red', 'Blue', 'Black', 'White', 'Green', 'Yellow', 'Pink', 'Purple', 'Orange') NOT NULL,
+fabric_material varchar(35),
+price int NOT NULL CHECK (price >= 0),
+category ENUM ('Furniture', 'Decor', 'Kitchenware', 'Bedding', 'Storage', 'Outdoor', 'Bathroom')
+);
+SELECT * FROM nishat.nishat_home;
+INSERT INTO nishat_home (product_id, product_name, size, color, fabric_material, price, category) VALUES
+(201, 'Dining Table', 'XL', 'Orange', 'Wood', 15000, 'Furniture'),
+(202, 'Ceramic Vase', 'S', 'White', 'Ceramic', 2500, 'Decor'),
+(203, 'Cookware Set', 'M', 'Green', 'Stainless Steel', 8000, 'Kitchenware'),
+(204, 'Cotton Bedsheet', 'L', 'Blue', 'Cotton', 3000, 'Bedding'),
+(205, 'LED Table Lamp', 'S', 'Black', 'Plastic', 4500, 'Decor'),
+(206, 'Bookshelf', 'XL', 'Yellow', 'Wood', 12000, 'Furniture'),
+(207, 'Patio Set', 'XXL', 'Black', 'Rattan', 25000, 'Outdoor'),
+(208, 'Towel Set', 'M', 'White', 'Cotton', 4000, 'Bathroom'),
+(209, 'Coffee Table', 'L', 'Black', 'Glass', 10000, 'Furniture'),
+(210, 'Wall Clock', 'S', 'Red', 'Plastic', 1500, 'Decor'),
+(211, 'Frying Pan', 'M', 'Black', 'Aluminum', 2000, 'Kitchenware'),
+(212, 'Pillowcases', 'S', 'Pink', 'Silk', 2500, 'Bedding'),
+(213, 'Floor Lamp', 'L', 'Green', 'Metal', 5500, 'Decor'),
+(214, 'Storage Bins', 'M', 'Green', 'Plastic', 3000, 'Storage'),
+(215, 'Outdoor Umbrella', 'XL', 'Blue', 'Fabric', 7000, 'Outdoor');
+
+create table accessory 
+(product_id int primary key,
+product_name varchar(30) not null,
+size varchar(30) NOT null,
+color ENUM('Red', 'Blue', 'Black', 'White', 'Green', 'Yellow', 'Pink', 'Purple', 'Orange') NOT NULL,
+fabric_material varchar(35),
+price int NOT NULL CHECK (price >= 0),
+category ENUM ('Bags', 'Shoes', 'Jewelry', 'Hats', 'Scarves', 'Belts', 'Sunglasses')
+);
+SELECT * FROM nishat.accessory;
+INSERT INTO accessory (
+    product_id, product_name, size, color, fabric_material, price, category
+) VALUES
+(301, 'Leather Handbag', 'Medium', 'Black', 'Leather', 5000, 'Bags'),
+(302, 'Canvas Backpack', 'Large', 'Blue', 'Canvas', 3500, 'Bags'),
+(303, 'Sneakers', 'US 9', 'White', 'Synthetic', 4000, 'Shoes'),
+(304, 'Ankle Boots', 'US 7', 'Black', 'Suede', 4500, 'Shoes'),
+(305, 'Statement Necklace', 'One Size', 'Red', 'Metal', 2000, 'Jewelry'),
+(306, 'Dangle Earrings', 'One Size', 'Purple', 'Plastic', 1500, 'Jewelry'),
+(307, 'Fedora Hat', 'Medium', 'Yellow', 'Wool', 2500, 'Hats'),
+(308, 'Beanie', 'One Size', 'Red', 'Acrylic', 1000, 'Hats'),
+(309, 'Silk Scarf', 'Large', 'Yellow', 'Silk', 1800, 'Scarves'),
+(310, 'Leather Belt', 'Small', 'Black', 'Leather', 1200, 'Belts'),
+(311, 'Aviator Sunglasses', 'One Size', 'Green', 'Metal', 3000, 'Sunglasses'),
+(312, 'Wayfarer Sunglasses', 'One Size', 'Black', 'Plastic', 2500, 'Sunglasses'),
+(313, 'Woven Straw Bag', 'Medium', 'Pink', 'Straw', 2800, 'Bags'),
+(314, 'High Heels', 'US 8', 'Orange', 'Faux Leather', 4500, 'Shoes'),
+(315, 'Charm Bracelet', 'One Size', 'Blue', 'Metal', 2200, 'Jewelry');
