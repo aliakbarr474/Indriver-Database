@@ -1,0 +1,28 @@
+SELECT * FROM indriver.drivers;
+insert into drivers(driverId,first_name,last_name,phone_number,gender,vehicle_name,vehicle_number,city,rating)
+values ( 01 ,'Saif','Rehman', 0311456789,'Male','XLI','UET630','Karachi', 7.5),
+( 02 ,'Ali','Akbar',0321657788,'Male','Alto','KHI221','Karchi', 5.5),
+( 03 ,'Talha','Rauf',0334123809,'Male','Mehran','LHR301','Lahore',8),
+( 04 ,'Zain','Pasha',0321436700,'Male','Vitz','KHI445','Karchi', 8),
+( 05 ,'Ali','Hamza',0319956889,'Male','Indus','LHR778','Karachi', 8.5),
+( 06 ,'Afeef','Ahmad',0322678902,'Male','Mehran','LHR678','Islamabad', 5.5),
+( 07 ,'Hamza','Khan',0311458709,'Male','GLI','UET600','Islamabad', 7.5),
+( 08 ,'Ateeq','Ali',0315756773,'Male','CD 70','ICT908','Rawalpindi', 6),
+( 09 ,'Qayyum','Iqbal',0331356729,'Male','Mehran','RIA221','Rawalpindi', 6.5),
+( 10 ,'Farah','Batool',0310455989,'Female','XLI','LEB036','Multan', 7.5),
+( 11 ,'Suffyan','Jamal',0322956789,'Male','Wagon R','LED551','Rawalpindi', 8),
+( 12 ,'Hussain','Raza',0311406080,'Male','Mehran','UET345','Islamabad', 7),
+( 13 ,'Fizza','Marium',0312452722,'Female','Cultus','CSV887','Lahore', 6.5),
+( 14 ,'Alishba','Khan',0310451711,'Female','Vitz','BQP897','Lahore', 5.5),
+( 15 ,'Abdullah','Azhar',0311416712,'Male','Mehran','LED009','Multan', 5),
+( 16 ,'Talha','Anwar',0312426388,'Male','Indus','LEB452','Islamabad', 8),
+( 17 ,'Basit','Bajwa',0334454784,'Male','XLI','ICT666','Islamabad', 9),
+( 18 ,'Iqra','Nasir',0311356785,'Female','GLI','CSV336','Lahore', 7),
+( 19 ,'Zahid','Tanveer',0311445668,'Male','Cultus','LEB558','Multan', 9),
+( 20 ,'Haris','Bashir',0321456779,'Male','Alto','KHI908','Rawalpindi', 6),
+( 21 ,'Hammad','Naqvi',0331459778,'Male','Indus','ICT110','Lahore', 8),
+( 22 ,'Ahmad','Aziz',0300456321,'Male','Vitz','ICT931','Islamabad', 7.5),
+( 23 ,'Ali','Faiz',0311321789,'Male','Wagon R','KHI906','Karchi', 8.5),
+( 24 ,'Yousuf','Abbas',0311456987,'Male','Cultus','LEB235','Lahore', 9),
+( 25 ,'Nadia','Khan',0311456000,'Female','Alto','ICT679','Lahore', 5);
+
