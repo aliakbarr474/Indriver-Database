@@ -1,0 +1,16 @@
+INSERT INTO bottom_Wear (name, size, gender, type, price, color, material, quantity) VALUES
+('Wide Legged Jeans', 'M', 'Female', 'Jeans', 4000, 'Blue', 'Denim', 50),
+('Slim Fit Jeans', 'L', 'Female', 'Jeans', 3500, 'Black', 'Quatri', 25),
+('Mom Jeans', 'S', 'Female', 'Jeans', 5000, 'Blue', 'Denim', 60),
+('Joggers', 'M', 'Male', 'Joggers', 2500, 'White', 'Cotton', 50),
+('Straight Fit Jeans', 'L', 'Male', 'Jeans', 4000, 'Navy', 'Denim', 30),
+('Light Ripped Jeans', 'M', 'Female', 'Jeans', 4000, 'Light Blue', 'Denim', 10),
+('High Rise Skinny', 'S', 'Female', 'Jeans', 6000, 'Off white', 'Denim', 35),
+('Bootcutt', 'M', 'Female', 'Jeans', 4000, 'Blue', 'Denim', 50),
+('Trousers', 'L', 'Male', 'Trousers', 2000, 'Grey', 'Cotton', 60),
+('Trousers', 'M', 'Female', 'Trousers', 2000, 'Pink', 'Linen', 60),
+('Jeans', 'S', 'Male', 'Jeans', 5000, 'Grey', 'Denim', 20),
+('Bedazzled Jeans', 'M', 'Female', 'Jeans', 6000, 'Black', 'Denim', 30),
+('Shorts', 'L', 'Male', 'Shorts', 1500, 'Khaki', 'Cotton', 15),
+('Dress Pants', 'S', 'Female', 'Pants', 4000, 'White', 'Silk', 15),
+('Joggers', 'L', 'Male', 'Joggers', 2600, 'Blue', 'Polyester', 10);
