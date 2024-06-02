@@ -4,7 +4,7 @@ create table customers(
 customerId int auto_increment,
 first_name varchar(20),
 last_name varchar(20),
-phone_number int,
+phone_number varchar(12),
 gender varchar(6),
 age int,
 address varchar(150),
@@ -12,23 +12,11 @@ address varchar(150),
 primary key (customerId)
 );
 
-create table shorts(
-shortId int auto_increment,
-name varchar(20),
-size char,
-gender varchar(6),
-price int,
-color varchar(10),
-material varchar(10),
-quantity int,
-
-primary key(shortId)
-);
 
 create table shoes(
 shortId int auto_increment,
 name varchar(20),
-size char,
+size int,
 gender varchar(6),
 price int,
 color varchar(10),
